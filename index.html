@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Validation in JS</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <div class="form-container">
+            <form action="" method="get" id="frmRegistration" name="frmRegistration" onsubmit="return Validate()">
+                <div class="input-div">
+                    <div class="first-div">
+                        <h2 for="Name">Name : </h2>
+                        <input type="text" name="name" id="name" placeholder="your name" value="" id="name"
+                            class="name">
+                    </div>
+                    <span id="namevalidation"></span>
+                </div>
+                <div class="input-div">
+                    <div class="first-div">
+                        <h2 for="Email">Email : </h2>
+                        <input type="text" name="email" id="email" placeholder="your email" value="" id="email"
+                            class="email">
+                    </div>
+                    <span id="emailvalidation"></span>
+                </div>
+                <div class="input-div">
+                    <div class="first-div">
+                        <h2 for="Password">Password : </h2>
+                        <input type="password" name="password" id="password" value="" id="password">
+                    </div>
+                    <span id="passwordvalidation"></span>
+                </div>
+                <div class="input-div">
+                    <div class="first-div">
+                        <h2 for="Number">Phone Number : </h2>
+                        <input type="number" name="number" id="number" value="" id="number">
+                    </div>
+                    <span id="numbervalidation"></span>
+                </div>
+                <div class="input-div">
+                    <div class="first-div">
+                        <h2 for="Gender">Gender :</h2><br>
+                        <label for="Male">Male</label>
+                        <input type="radio" value="male" name="gender" id="male">
+                        <label for="Female">Female</label>
+                        <input type="radio" value="female" name="gender" id="female">
+                        <label for="Other">Other</label>
+                        <input type="radio" value="other" name="gender" id="other">
+                    </div>
+                    <span id="gendervalidation"></span>
+                </div>
+                <div class="input-div">
+                    <div class="first-div">
+                        <h2 for="Gender">Language :</h2>
+                        <select name="language" id="language" value="">
+                            <option value="">Select Language</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="English">English</option>
+                            <option value="Hindi">Hindi</option>
+                        </select>
+                    </div>
+                    <span id="languagevalidation"></span>
+                </div>
+                <div class="input-div">
+                    <div class="first-div">
+                        <h2 for="Zip">Zip Code : </h2>
+                        <input type="text" name="zip" id="zip">
+                    </div>
+                    <span id="zipvalidation"></span>
+                </div>
+                <div class="input-div">
+                    <div class="first-div">
+                        <h2 for="About">About : </h2>
+                        <input type="text" name="about" id="about" placeholder="Write about yourself">
+                    </div>
+                    <span id="aboutvalidation"></span>
+                </div>
+
+                <div class="submit-btn">
+                    <input type="submit" name="" id="" value="SUBMIT">
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+    <script>
+        function Validate() {
+            var isNameValid = true;
+            var isEmailValid = true;
+            var isPasswordValid = true;
+            var isNumberValid = true;
+            var isGenderValid = true;
+            var isLanguageValid = true;
+            var isZipValid = true;
+            var isAboutValid = true;
+
+            // Name Validation
+            if (document.getElementById("name").value == "") {
+                isNameValid = false;
+                document.getElementById("namevalidation").innerHTML = "Please Enter Your Name"
+                document.getElementById("namevalidation").style.color = "red"
+            } else {
+                isNameValid = true;
+            }
+
+            // Email Validation
+            if (document.getElementById("email").value == "") {
+                isEmailValid = false;
+                document.getElementById("emailvalidation").innerHTML = "Please Enter Your Email"
+                document.getElementById("emailvalidation").style.color = "red"
+            } else {
+                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("emailvalidation").value) == false) {
+                    isEmailValid = false;
+                    document.getElementById("emailvalidation").innerHTML = "Please Enter Valid Email"
+                    document.getElementById("emailvalidation").style.color = "red"
+                } else {
+                    isEmailValid = true;
+                }
+            }
+
+            // Password Validation
+            if (document.getElementById("password").value == "") {
+                isPasswordValid = false;
+                document.getElementById("passwordvalidation").innerHTML = "Please Enter Your Password"
+                document.getElementById("passwordvalidation").style.color = "red"
+            } else {
+                isPasswordValid = true;
+            }
+
+            // Number Validation
+            if (document.getElementById("number").value == "") {
+                isNumberValid = false;
+                document.getElementById("numbervalidation").innerHTML = "Please Enter Your Number"
+                document.getElementById("numbervalidation").style.color = "red"
+            } else {
+                if (/^\d{10}$/.test(document.getElementById("numbervalidation").value) == false) {
+                    isNumberValid = false;
+                    document.getElementById("numbervalidation").innerHTML = "Please Enter Valid Number"
+                    document.getElementById("numbervalidation").style.color = "red"
+                } else {
+                    isNumberValid = true;
+                }
+            }
+
+            // // Gender Validation
+            if (document.getElementById("male").checked != true && document.getElementById("female").checked != true && document.getElementById("other").checked != true) {
+                isGenderValid = false;
+                document.getElementById("gendervalidation").innerHTML = "Please Select Your Gender"
+                document.getElementById("gendervalidation").style.color = "red"
+            } else {
+                isGenderValid = true;
+            }
+
+            // Language Validation
+            if (document.getElementById("language").value == "") {
+                isLanguageValid = false;
+                document.getElementById("languagevalidation").innerHTML = "Please Select Your Language"
+                document.getElementById("languagevalidation").style.color = "red"
+            } else {
+                isLanguageValid = true;
+            }
+
+            // zip Validation
+            if (document.getElementById("zip").value == "") {
+                isZipValid = false;
+                document.getElementById("zipvalidation").innerHTML = "Please Enter Your Zip Code"
+                document.getElementById("zipvalidation").style.color = "red"
+            } else {
+                isZipValid = true;
+            }
+
+            // zip Validation
+            if (document.getElementById("about").value == "") {
+                isAboutValid = false;
+                document.getElementById("aboutvalidation").innerHTML = "Please Enter About Yourself"
+                document.getElementById("aboutvalidation").style.color = "red"
+            } else {
+                isAboutValid = true;
+            }
+
+            if (isNameValid == false || isEmailValid == false || isPasswordValid == false || isNumberValid == false || isGenderValid == false || isLanguageValid == false || isZipValid == false || isAboutValid == false) {
+                return false
+            } else {
+                return true
+            }
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

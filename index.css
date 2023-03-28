@@ -1,0 +1,116 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-size: 14px;
+    background: #b01956;
+}
+
+.container
+{
+    background: #7f143e;
+    width: 500px;
+    padding: 25px;
+    margin: 40px auto 0;
+    border-top: 5px solid white;
+    box-shadow: 0 0 5px ;
+    border-radius: 5px;
+}
+
+.container h2
+{
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+
+.container .form-container
+{
+    padding: 25px;
+}
+
+.container .form-container .input-div
+{
+    padding: 10px;
+    display: flex;
+}
+
+.container .form-container .input-div
+{
+    padding: 10px;
+    display: block;
+}
+
+.container .form-container .input-div .first-div
+{
+    padding: 5px;
+    display: flex;
+}
+
+.container .form-container .input-div input
+{
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+}
+
+.container .form-container .input-div h2
+{
+    color: white;
+    width: 150px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.container .form-container .input-div label
+{
+    color: white;
+    font-size: 18px;
+    padding: 0 5px;
+}
+
+.container .form-container .input-div span
+{
+    color: white;
+    font-size: 15px;
+     text-align: center;
+    width: 100%;
+    display:  flex;
+    padding-left: 100px;
+    justify-content: center; 
+}
+
+.container .form-container .submit-btn
+{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container .form-container .submit-btn input
+{
+    padding: 10px;
+    margin: 10px;
+    font-size: 17px;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    box-shadow: 0 0 5px ;
+    display: flex;
+    justify-content: center;
+}
+
+.container .form-container .submit-btn input:hover
+{
+    cursor: pointer;
+    color: #7f143e;
+}
+
+
+
