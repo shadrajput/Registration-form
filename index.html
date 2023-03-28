@@ -11,82 +11,65 @@
 
 <body>
     <div class="container">
-        <h2>Registration Form</h2>
-        <p></p>
         <div class="form-container">
-            <form action="" method="get"  id="frmRegistration" name="frm-Registration" onsubmit="return Validate()" autocomplete="off">
-                <p class="success Register-success"></p>
+            <form action="" method="get" id="frmRegistration" name="frm-Registration" onsubmit="return Validate()"
+                autocomplete="off">
                 <div class="input-div">
-                    <div class="first-div">
-                        <h2 for="Name">Name : </h2>
-                        <input type="text" name="name" id="name" placeholder="your name" value="" id="name"
-                            class="name">
-                    </div>
-                    <span class="error name-error" id="namevalidation"></span>
+                    <label for="Name">Name : </label>
+                    <input type="text" name="name" id="name" placeholder="your name" value="" id="name" class="name">
+
                 </div>
                 <div class="input-div">
-                    <div class="first-div">
-                        <h2 for="Email">Email : </h2>
-                        <input type="text" name="email" id="email" placeholder="your email" value="" id="email"
-                            class="email">
-                    </div>
-                    <span class="error" id="emailvalidation"></span>
+                    <label for="Email">Email : </label>
+                    <input type="email" name="email" id="email" placeholder="your email" value="" id="email"
+                        class="email">
+
                 </div>
                 <div class="input-div">
-                    <div class="first-div">
-                        <h2 for="Password">Password : </h2>
-                        <input type="password" name="password" id="password" value="" id="password">
-                    </div>
-                    <span class="error" id="passwordvalidation"></span>
+                    <label for="Password">Password : </label>
+                    <input type="password" name="password" id="password" value="" id="password">
+
+
                 </div>
                 <div class="input-div">
-                    <div class="first-div">
-                        <h2 for="Number">Phone Number : </h2>
-                        <input type="number" name="number" id="number" value="" id="number">
-                    </div>
-                    <span class="error" id="numbervalidation"></span>
+                    <label for="Number">Phone Number : </label>
+                    <input type="number" name="number" id="number" value="" id="number">
+
+
                 </div>
                 <div class="input-div">
-                    <div class="first-div">
-                        <h2 for="Gender">Gender :</h2><br>
-                        <label for="Male">Male</label>
-                        <input type="radio" value="male" name="gender" id="male">
-                        <label for="Female">Female</label>
-                        <input type="radio" value="female" name="gender" id="female">
-                        <label for="Other">Other</label>
-                        <input type="radio" value="other" name="gender" id="other">
-                    </div>
-                    <span class="error" id="gendervalidation"></span>
+                    <label for="Gender">Gender :</label><br>
+                    <span for="Male">Male</span>
+                    <input type="radio" value="male" name="gender" id="male">
+                    <span for="Female">Female</span>
+                    <input type="radio" value="female" name="gender" id="female">
+                    <span for="Other">Other</span>
+                    <input type="radio" value="other" name="gender" id="other">
                 </div>
                 <div class="input-div">
-                    <div class="first-div">
-                        <h2 for="Gender">Language :</h2>
-                        <select name="language" id="language" value="">
-                            <option value="">Select Language</option>
-                            <option value="Hindi">Hindi</option>
-                            <option value="English">English</option>
-                            <option value="Hindi">Hindi</option>
-                        </select>
-                    </div>
-                    <span class="error" id="languagevalidation"></span>
+                    <label for="Gender">Language :</label>
+                    <select name="language" id="language" value="">
+                        <option value="">Select Language</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                    </select>
+
+
                 </div>
                 <div class="input-div">
-                    <div class="first-div">
-                        <h2 for="Zip">Zip Code : </h2>
-                        <input type="text" name="zip" id="zip">
-                    </div>
-                    <span class="error" id="zipvalidation"></span>
+                    <label for="Zip">Zip Code : </label>
+                    <input type="text" name="zip" id="zip">
+
                 </div>
                 <div class="input-div">
-                    <div class="first-div">
-                        <h2 for="About">About : </h2>
-                        <input type="text" name="about" id="about" placeholder="Write about yourself">
-                    </div>
-                    <span class="error" id="aboutvalidation"></span>
+                    <label for="About">About : </label>
+                    <input type="text" name="about" id="about" placeholder="Write about yourself">
+
                 </div>
 
                 <div class="submit-btn">
-                    <input type="submit" name="" id="" value="SUBMIT">
+                    <input type="submit" name="" id="" value="Register">
                 </div>
             </form>
 
